@@ -14,7 +14,11 @@ import router from './router'
 
 import '@/icons' // icon
 import '@/permission' // permission control
-
+// plugins
+import Moment from './plugins/moment'
+import Echarts from './plugins/echarts'
+Vue.use(Moment)
+Vue.use(Echarts)
 /**
  * If you don't want to use mock-server
  * you want to use mockjs for request interception
