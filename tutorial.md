@@ -1,0 +1,6 @@
+- moment
+- husky
+- lint-staged
+- echart
+    - https://github.com/apache/incubator-echarts/tree/master/src/component
+    - https://www.echartsjs.com/examples/

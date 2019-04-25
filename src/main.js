@@ -4,7 +4,7 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import locale from 'element-ui/lib/locale/lang/en' // lang i18n
+import i18n from './lang'
 
 import '@/styles/index.scss' // global css
 
@@ -15,10 +15,7 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 // plugins
-import Moment from './plugins/moment'
-import Echarts from './plugins/echarts'
-Vue.use(Moment)
-Vue.use(Echarts)
+import '@/plugins'
 /**
  * If you don't want to use mock-server
  * you want to use mockjs for request interception
@@ -29,13 +26,14 @@ Vue.use(Echarts)
  */
 
 // set ElementUI lang to EN
-Vue.use(ElementUI, { locale })
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
   router,
+  i18n,
   store,
   render: h => h(App)
 })

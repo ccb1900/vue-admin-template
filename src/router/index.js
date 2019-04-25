@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import i18n from '../lang'
 Vue.use(Router)
 
 /* Layout */
@@ -49,9 +49,12 @@ export const constantRoutes = [
     redirect: '/dashboard',
     children: [{
       path: 'dashboard',
-      name: 'Dashboard',
+      name: 'dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: {
+        title: i18n.t('route.dashboard'),
+        icon: 'dashboard'
+      }
     }]
   },
 
@@ -66,7 +69,10 @@ export const constantRoutes = [
         path: 'table',
         name: 'Table',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        meta: {
+          title: i18n.t('route.table'),
+          icon: 'table'
+        }
       },
       {
         path: 'tree',

@@ -1,17 +1,26 @@
 <template>
   <div class="dashboard-container">
     <div class="dashboard-text">name: {{ name }}</div>
+    <t />
     <x />
+    <y />
+    <z />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import x from '../../components/Chart/line'
+import y from '../../components/Chart/radar'
+import z from '../../components/Chart/pie'
+import t from './test-table'
 export default {
   name: 'Dashboard',
   components: {
-    x: x
+    x: x,
+    z: z,
+    y: y,
+    t: t
   },
   computed: {
     ...mapGetters([
